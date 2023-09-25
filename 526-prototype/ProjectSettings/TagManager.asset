@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Sconce
   - Torch
+=======
+  - Platform
+  - Light
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
