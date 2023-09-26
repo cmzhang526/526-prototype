@@ -8,6 +8,14 @@ public class Player : MonoBehaviour
     public float diminishingSpeed = .001f;
     public bool isLightActive = true;
 
+    public Vector3 startPosition;
+
+    void Start()
+    {
+        startPosition = transform.position;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +26,11 @@ public class Player : MonoBehaviour
         {
             playerLight.transform.localScale = new Vector3(.1f, .1f, .1f);
             isLightActive = false;
+        }
+
+        if(transform.position.y < -6f)
+        {
+            transform.position = startPosition;
         }
     }
 }
