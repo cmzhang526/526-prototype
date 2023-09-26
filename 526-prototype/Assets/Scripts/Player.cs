@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -30,7 +31,8 @@ public class Player : MonoBehaviour
 
         if(transform.position.y < -6f)
         {
-            transform.position = startPosition;
+            int currScene = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currScene);
         }
     }
 }
