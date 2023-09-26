@@ -13,16 +13,37 @@ public class Platform : MonoBehaviour
 
     public PlatformType type = PlatformType.Persistent;
     public Collider2D nonTriggerCollider;
+    public bool isActive = true;
+
+    public Player player;
+
+    void Start()
+    {
+        if (type == PlatformType.MustLight)
+        {
+            nonTriggerCollider.enabled = false;
+            isActive = false;
+        }
+        else if (type == PlatformType.MustDark)
+        {
+            nonTriggerCollider.enabled = true;
+            isActive = true;
+        }
+
+        player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();
+    }
 
     public void LightPlatform()
     {
         if (type == PlatformType.MustLight)
         {
             nonTriggerCollider.enabled = true;
+            isActive = true;
         }
         else if(type == PlatformType.MustDark)
         {
             nonTriggerCollider.enabled = false;
+            isActive = false;
         }
     }
 
@@ -31,16 +52,19 @@ public class Platform : MonoBehaviour
         if (type == PlatformType.MustLight)
         {
             nonTriggerCollider.enabled = false;
+            isActive = false;
         }
         else if (type == PlatformType.MustDark)
         {
             nonTriggerCollider.enabled = true;
+            isActive = true;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Light")
+        // = col.gameObject.GetComponent<Player>();
+        if (col.gameObject.tag == "Light" && player.isLightActive)
         {
             LightPlatform();
         }
