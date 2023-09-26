@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject PlayerLight;
+    public float diminishingSpeed = .001f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerLight.transform.localScale -= new Vector3(.001f, .001f, .001f);
+        PlayerLight.transform.localScale -= new Vector3(diminishingSpeed, diminishingSpeed, diminishingSpeed);
         if (PlayerLight.transform.localScale.x < .1f)
         {
             PlayerLight.transform.localScale = new Vector3(.1f, .1f, .1f);
