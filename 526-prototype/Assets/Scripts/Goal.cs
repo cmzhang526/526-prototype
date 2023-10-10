@@ -10,6 +10,7 @@ public class Goal : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("Entering Goal");
         if (col.gameObject.tag == "Player")
         {
             PlayerController pc = col.gameObject.GetComponent<PlayerController>();
