@@ -29,10 +29,10 @@ public class Player : MonoBehaviour
             isLightActive = false;
         }
 
-        if(transform.position.y < -6f)
+        /*if(transform.position.y < -6f)
         {
             int currScene = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currScene);
-        }
+        }*/
     }
 }
