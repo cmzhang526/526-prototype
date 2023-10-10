@@ -5,12 +5,21 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    [SerializeField]
+    Shape.ShapeType myShapeType = Shape.ShapeType.None;
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
-            LoadNextLevel();
+            PlayerController pc = col.gameObject.GetComponent<PlayerController>();
+            if (myShapeType == pc.currentShape)
+            {
+                LoadNextLevel();
+            }
         }
+
+
     }
 
     public void LoadNextLevel()
