@@ -9,11 +9,17 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public Shape.ShapeType currentShape = Shape.ShapeType.Square;
+    public int currentCoin = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    void SpawnAtLastCheckpoint()
+    {
+
     }
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1308860686575220436}
   - component: {fileID: 1308860686575220437}
   - component: {fileID: 1308860686575220439}
-  - component: {fileID: 1308860686575220433}
   - component: {fileID: 4765080187676705928}
   - component: {fileID: 1823474112688655331}
   m_Layer: 3
@@ -155,22 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1308860686575220437}
   runSpeed: 100
---- !u!114 &1308860686575220433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308860686575220424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f787446059ab47141aff3f110cbe55db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLight: {fileID: 0}
-  diminishingSpeed: 0.0005
-  isLightActive: 1
-  startPosition: {x: 0, y: 0, z: 0}
 --- !u!70 &4765080187676705928
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
