@@ -13,21 +13,21 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        startPosition = transform.position;
+        //startPosition = transform.position;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        isLightActive = true;
-        playerLight.transform.localScale -= new Vector3(diminishingSpeed, diminishingSpeed, diminishingSpeed);
+        //isLightActive = true;
+        //playerLight.transform.localScale -= new Vector3(diminishingSpeed, diminishingSpeed, diminishingSpeed);
 
-        if (playerLight.transform.localScale.x < .1f)
-        {
-            playerLight.transform.localScale = new Vector3(.1f, .1f, .1f);
-            isLightActive = false;
-        }
+        //if (playerLight.transform.localScale.x < .1f)
+        //{
+        //    playerLight.transform.localScale = new Vector3(.1f, .1f, .1f);
+        //    isLightActive = false;
+        //}
 
         /*if(transform.position.y < -6f)
         {
