@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-    public GameObject platform;
 
     // Start is called before the first frame update
     void Start()
     {
-        platform.SetActive(false);
+        int childrenCount = transform.childCount;
+        for (int i = 0; i < childrenCount; i++) 
+        {
+            var child = transform.GetChild(i);
+            child.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -20,6 +24,15 @@ public class Switch : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        platform.SetActive(true);
+        if (col.CompareTag("Player"))
+        {
+            int childrenCount = transform.childCount;
+            for (int i = 0; i < childrenCount; i++)
+            {
+                var child = transform.GetChild(i);
+                child.gameObject.SetActive(true);
+            }
+        }
+
     }
 }
