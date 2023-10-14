@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Sconce
   - Torch
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeBtnPressed()
     {
+        Debug.Log("=====resume btn test=====");
         PauseUI.SetActive(false);
         Time.timeScale = 1f;
         IsGamePaused = false;
@@ -48,6 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResetLevel()
     {
+        Debug.Log("=====reset btn test=====");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         PauseUI.SetActive(false);
         Time.timeScale = 1f;
@@ -56,6 +58,7 @@ public class PauseMenu : MonoBehaviour
 
     public void BackToMain()
     {
+        Debug.Log("=====back btn test=====");
         IsGamePaused = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneBuildIndex: 0);
