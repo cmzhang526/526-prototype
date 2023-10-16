@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class AnalyticsTestforCoin : MonoBehaviour
 {
-    [SerializeField] private string URL;
+    [SerializeField] private string CoinsURL;
+    [SerializeField] private string SpikeURL;
 
     private long _sessionID;
     private int _testInt;
-    private bool _testBool;
-    private float _testFloat;
     private int currCoins;
+
+    private float _playerX;
+    private float _playerY;
 
     public PlayerController playerControllerforCoin;
 
@@ -22,8 +24,6 @@ public class AnalyticsTestforCoin : MonoBehaviour
         double epochTime = System.Math.Round((System.DateTime.Now - new System.DateTime(1970, 1, 1)).TotalMilliseconds);
         currCoins = playerControllerforCoin.currentCoin;
         _sessionID = (long)epochTime;
-
-        
     }
 
     private void Update()
@@ -32,36 +32,33 @@ public class AnalyticsTestforCoin : MonoBehaviour
         {
             currCoins = playerControllerforCoin.currentCoin;
             _testInt = currCoins;
-            Send();
+            SendCoin();
         }
         
     }
 
-
-    public void Send()
+    public void SendCoin()
     {
         // Assign variables
-        //_testInt = Random.Range(0, 101);
-        
-        _testBool = true;
-        _testFloat = Random.Range(0.0f, 10.0f);
 
-        StartCoroutine(Post(_sessionID.ToString(), _testInt.ToString(),
-            _testBool.ToString(), _testFloat.ToString()));
+        StartCoroutine(PostCoin(_sessionID.ToString(), _testInt.ToString()));
     }
 
-    private IEnumerator Post(string sessionID, string testInt,
-        string testBool, string testFloat)
+    public void SendSpike(float posX, float posY)
+    {
+        Debug.Log("Sent Spike Form");
+        StartCoroutine(PostSpike(posX.ToString(), posY.ToString()));
+    }
+
+    private IEnumerator PostCoin(string sessionID, string testInt)
     {
         // Create the form and enter reponses;
         WWWForm form = new WWWForm();
         form.AddField("entry.439495272", sessionID);
         form.AddField("entry.306375043", testInt);
-        form.AddField("entry.1751234061", testBool);
-        form.AddField("entry.908372766", testFloat);
 
         // Send responses and verify result
-        using (UnityWebRequest www = UnityWebRequest.Post(URL, form))
+        using (UnityWebRequest www = UnityWebRequest.Post(CoinsURL, form))
         {
             yield return www.SendWebRequest();
 
@@ -72,7 +69,33 @@ public class AnalyticsTestforCoin : MonoBehaviour
             }
             else
             {
-                Debug.Log("Form upload complete!");
+                Debug.Log("Coin Form upload complete!");
+
+            }
+
+        }
+    }
+
+    private IEnumerator PostSpike(string playerX, string playerY)
+    {
+        // Create the form and enter reponses;
+        WWWForm form = new WWWForm();
+        form.AddField("entry.493098765", playerX);
+        form.AddField("entry.189242426", playerY);
+
+        // Send responses and verify result
+        using (UnityWebRequest www = UnityWebRequest.Post(SpikeURL, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+
+            }
+            else
+            {
+                Debug.Log("Spike Form upload complete!");
 
             }
 
