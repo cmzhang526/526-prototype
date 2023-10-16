@@ -32,8 +32,9 @@ public class AnalyticsTestforCoin : MonoBehaviour
         {
             currCoins = playerControllerforCoin.currentCoin;
             _testInt = currCoins;
+            Send();
         }
-        Send();
+        
     }
 
 
@@ -54,10 +55,10 @@ public class AnalyticsTestforCoin : MonoBehaviour
     {
         // Create the form and enter reponses;
         WWWForm form = new WWWForm();
-        form.AddField("entry.970035855", sessionID);
-        form.AddField("entry.444728086", testInt);
-        form.AddField("entry.2120837480", testBool);
-        form.AddField("entry.783971374", testFloat);
+        form.AddField("entry.439495272", sessionID);
+        form.AddField("entry.306375043", testInt);
+        form.AddField("entry.1751234061", testBool);
+        form.AddField("entry.908372766", testFloat);
 
         // Send responses and verify result
         using (UnityWebRequest www = UnityWebRequest.Post(URL, form))
