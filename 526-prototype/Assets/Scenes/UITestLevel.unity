@@ -5907,6 +5907,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
   m_PrefabInstance: {fileID: 1769478827}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &250108496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7398609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a642d76f1262c2b4493e4c1132f6b630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSfyzeB_IxbZwx94UDvN1-qefR36x-wwb1SUMiLycIitbhI5dw/formResponse
+  playerControllerforCoin: {fileID: 250108497}
+--- !u!114 &250108497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1823474112688655331, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
+  m_PrefabInstance: {fileID: 1769478827}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7398609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3566da6e20f714e86b0092ea350633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &277162535
 PrefabInstance:
   m_ObjectHideFlags: 0
