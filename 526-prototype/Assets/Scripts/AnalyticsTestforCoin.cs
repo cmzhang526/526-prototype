@@ -22,8 +22,8 @@ public class AnalyticsTestforCoin : MonoBehaviour
         double epochTime = System.Math.Round((System.DateTime.Now - new System.DateTime(1970, 1, 1)).TotalMilliseconds);
         currCoins = playerControllerforCoin.currentCoin;
         _sessionID = (long)epochTime;
-        _testInt = currCoins;
-        Send();
+
+        
     }
 
     private void Update()
@@ -31,7 +31,9 @@ public class AnalyticsTestforCoin : MonoBehaviour
         if (currCoins != playerControllerforCoin.currentCoin)
         {
             currCoins = playerControllerforCoin.currentCoin;
+            _testInt = currCoins;
         }
+        Send();
     }
 
 
@@ -39,6 +41,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
     {
         // Assign variables
         //_testInt = Random.Range(0, 101);
+        
         _testBool = true;
         _testFloat = Random.Range(0.0f, 10.0f);
 
