@@ -12,6 +12,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
     private int _testInt;
     private bool _testBool;
     private float _testFloat;
+    private int currCoins;
 
     public PlayerController playerControllerforCoin;
 
@@ -19,11 +20,20 @@ public class AnalyticsTestforCoin : MonoBehaviour
     {
         // Assign sessionID to identify playtests
         double epochTime = System.Math.Round((System.DateTime.Now - new System.DateTime(1970, 1, 1)).TotalMilliseconds);
-        int currCoins = playerControllerforCoin.currentCoin;
+        currCoins = playerControllerforCoin.currentCoin;
         _sessionID = (long)epochTime;
         _testInt = currCoins;
         Send();
     }
+
+    private void Update()
+    {
+        if (currCoins != playerControllerforCoin.currentCoin)
+        {
+            currCoins = playerControllerforCoin.currentCoin;
+        }
+    }
+
 
     public void Send()
     {
