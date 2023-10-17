@@ -24,7 +24,7 @@ public class Switch : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && col.GetComponent<SpriteRenderer>().enabled)
         {
             int childrenCount = transform.childCount;
             for (int i = 0; i < childrenCount; i++)
@@ -32,6 +32,7 @@ public class Switch : MonoBehaviour
                 var child = transform.GetChild(i);
                 child.gameObject.SetActive(true);
             }
+            GetComponent<SpriteRenderer>().enabled = false;
         }
 
     }
