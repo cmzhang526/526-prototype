@@ -16,12 +16,13 @@ public class AnalyticsTestforCoin : MonoBehaviour
     private float _playerX;
     private float _playerY;
 
-    public PlayerController playerControllerforCoin;
+    private PlayerController playerControllerforCoin = null;
 
     private void Awake()
     {
         // Assign sessionID to identify playtests
         double epochTime = System.Math.Round((System.DateTime.Now - new System.DateTime(1970, 1, 1)).TotalMilliseconds);
+        playerControllerforCoin = GetComponent<PlayerController>();
         currCoins = playerControllerforCoin.currentCoin;
         _sessionID = (long)epochTime;
     }
