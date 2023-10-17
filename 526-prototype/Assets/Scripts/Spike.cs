@@ -20,7 +20,10 @@ public class Spike : MonoBehaviour
             atest.SendSpike(posX, posY);
         }
 
-        int currScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currScene);
+        PlayerController pc = other.GetComponent<PlayerController>();
+        if (pc != null)
+        {
+            pc.SpawnAtLastCheckpoint();
+        }
     }
 }

@@ -13,6 +13,7 @@ public class Coin : MonoBehaviour
 
         PlayerController pc = other.gameObject.GetComponent<PlayerController>();
         pc.currentCoin++;
+        pc.respawnPoint = gameObject.transform.position;
         Destroy(gameObject);
     }
 }

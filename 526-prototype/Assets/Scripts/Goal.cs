@@ -10,22 +10,25 @@ public class Goal : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Entering Goal");
         if (col.gameObject.tag == "Player")
         {
             PlayerController pc = col.gameObject.GetComponent<PlayerController>();
             if (myShapeType == pc.currentShape)
             {
-                LoadNextLevel();
+                Debug.Log("Unlock door");
+
+                UnlockDoor();
             }
         }
 
 
     }
 
-    public void LoadNextLevel()
+    public void UnlockDoor()
     {
-        int currScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currScene + 1);
+        if (gameObject.transform.childCount > 0)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 }
