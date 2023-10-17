@@ -249,11 +249,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5966835732652864319, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_fontSize
-      value: 40
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966835732652864319, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_margin.w
+      value: -41.364807
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966835732652864319, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_margin.x
+      value: -61.062378
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966835732652864319, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_margin.z
+      value: -157.58057
       objectReference: {fileID: 0}
     - target: {fileID: 5966835732652864319, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_fontSizeBase
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8648153835615306464, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: _player
@@ -361,11 +373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -71.6
+      value: -76.5
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.94
+      value: -22.6
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.z
@@ -540,5 +552,7 @@ MonoBehaviour:
   - sceneAsset: {fileID: 102900000, guid: 38679b83c2d754bd6b1dbd37353fab37, type: 3}
     scenePath: Assets/Scenes/Level1_2.unity
   - sceneAsset: {fileID: 102900000, guid: e9ad3affe60c44349b39b36772b40a7c, type: 3}
-    scenePath: Assets/Scenes/Level1_3.unity
+    scenePath: Assets/Scenes/Level2_1.unity
+  - sceneAsset: {fileID: 102900000, guid: dee9dc34cb829400fa1b2a955b8b1335, type: 3}
+    scenePath: Assets/Scenes/Level2_2.unity
   _testList: 00000000

@@ -49,11 +49,13 @@ public class PauseMenu : MonoBehaviour
 
     public void ResetLevel()
     {
+        // TODO: think about if we need this
         Debug.Log("=====reset btn test=====");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        PauseUI.SetActive(false);
-        Time.timeScale = 1f;
-        IsGamePaused = false;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //PauseUI.SetActive(false);
+        //Time.timeScale = 1f;
+        //IsGamePaused = false;
+        BackToMain();
     }
 
     public void BackToMain()

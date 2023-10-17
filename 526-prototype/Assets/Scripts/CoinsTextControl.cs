@@ -10,7 +10,6 @@ public class CoinsTextControl : MonoBehaviour
     [SerializeField] private TMP_Text coinText;
     [SerializeField] private GameObject _player;
     private int count = 0;
-    [SerializeField] private int totalCoins = 0;
     private PlayerController _playerController;
     void Start()
     {
@@ -18,7 +17,7 @@ public class CoinsTextControl : MonoBehaviour
         _playerController = _player.GetComponent<PlayerController>();
 
         count = _playerController.currentCoin;
-        coinText.text = "Coins: " + _playerController.currentCoin + "/" + totalCoins;
+        coinText.text = "Coins: " + _playerController.currentCoin + "/" + _playerController.totalCoin;
     }
 
     // Update is called once per frame
@@ -27,7 +26,7 @@ public class CoinsTextControl : MonoBehaviour
         if(count!= _playerController.currentCoin)
         {
             count = _playerController.currentCoin;
-            coinText.text = "Coins: " + _playerController.currentCoin + "/" + totalCoins;
+            coinText.text = "Coins: " + _playerController.currentCoin + "/" + _playerController.totalCoin;
         }
     }
 }

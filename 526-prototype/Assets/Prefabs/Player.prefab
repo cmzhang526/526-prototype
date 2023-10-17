@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1308860686575220437}
   runSpeed: 200
+  jump: 0
 --- !u!70 &4765080187676705928
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -185,8 +186,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  respawnPoint: {x: 0, y: 0}
   currentShape: 2
   currentCoin: 0
+  totalCoin: 10
 --- !u!114 &6410834814931845909
 MonoBehaviour:
   m_ObjectHideFlags: 0
