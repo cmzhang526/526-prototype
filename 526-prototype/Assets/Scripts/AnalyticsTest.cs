@@ -15,7 +15,7 @@ public class AnalyticsTest : MonoBehaviour
 
     private void Awake()
     {
-        // Assign sessionID to identify playtests
+        // Assign sessionID to identify playtests with the start time in Unix
         double epochTime = System.Math.Round((System.DateTime.Now - new System.DateTime(1970, 1, 1)).TotalMilliseconds);
         _sessionID = (long)epochTime;
 
