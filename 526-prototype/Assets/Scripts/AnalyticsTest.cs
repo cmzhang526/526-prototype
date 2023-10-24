@@ -24,7 +24,7 @@ public class AnalyticsTest : MonoBehaviour
 
     public void Send()
     {
-        // Assign variables
+        // Assign variables which can be defined accordingly with different metrics
         _testInt = Random.Range(0, 101);
         _testBool = true;
         _testFloat = Random.Range(0.0f, 10.0f);
