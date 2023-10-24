@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AnalyticsTestforCoin : MonoBehaviour
 {
-    [SerializeField] private string CoinsURL;
-    [SerializeField] private string SpikeURL;
+    [SerializeField] private string CoinsURL; //https://docs.google.com/forms/u/1/d/e/1FAIpQLSebOn2bOdAEFXFa18xCbGScnZf4FAML6fYEpaUlhhBBf2tqRQ/formResponse
+    [SerializeField] private string SpikeURL; //https://docs.google.com/forms/u/0/d/e/1FAIpQLSciKoomFaXT1B-S4GDQBDwPTuo-vDvQlZubFPJHq7DFcEaZVQ/formResponse
 
     private long _sessionID;
     private int _testInt;
@@ -25,6 +26,9 @@ public class AnalyticsTestforCoin : MonoBehaviour
         playerControllerforCoin = GetComponent<PlayerController>();
         currCoins = playerControllerforCoin.currentCoin;
         _sessionID = (long)epochTime;
+
+        //test
+        Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
     }
 
     private void Update()
