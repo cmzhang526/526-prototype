@@ -648,11 +648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.7
+      value: -480.25
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.8
+      value: -22.98
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.z
@@ -822,6 +822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scenesToLoad:
+  - sceneAsset: {fileID: 102900000, guid: f6d733d9beeab4b479c7827361151a31, type: 3}
+    scenePath: Assets/Scenes/Level1_0.unity
   - sceneAsset: {fileID: 102900000, guid: 69fd00738d28643cb92fcc807a9a5f37, type: 3}
     scenePath: Assets/Scenes/Level1_1.unity
   - sceneAsset: {fileID: 102900000, guid: 38679b83c2d754bd6b1dbd37353fab37, type: 3}
