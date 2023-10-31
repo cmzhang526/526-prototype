@@ -14,6 +14,13 @@ public class Coin : MonoBehaviour
 
         PlayerController pc = other.gameObject.GetComponent<PlayerController>();
         pc.currentCoin++;
+
+        AnalyticsTestforCoin atest = other.GetComponent<AnalyticsTestforCoin>();
+        if (atest != null)
+        {
+            atest.SendChckpointTime(Time.time);
+        }
+
         if (pc.currentCoin == pc.totalCoin)
         {
             // collected all the coins, game over
