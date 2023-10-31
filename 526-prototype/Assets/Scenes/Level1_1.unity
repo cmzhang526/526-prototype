@@ -4489,7 +4489,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -81, y: -40, z: 0}
-  m_Size: {x: 160, y: 80, z: 1}
+  m_Size: {x: 160, y: 93, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -4735,7 +4735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2818800356473750315, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
       propertyPath: instructionsToHide.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2818800356473750315, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
       propertyPath: instructionsToShow.Array.size
@@ -4743,6 +4743,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2818800356473750315, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
       propertyPath: instructionsToHide.Array.data[0]
+      value: 
+      objectReference: {fileID: 1185137759}
+    - target: {fileID: 2818800356473750315, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
+      propertyPath: instructionsToHide.Array.data[1]
       value: 
       objectReference: {fileID: 1021621242}
     - target: {fileID: 2818800356473750315, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
@@ -4897,7 +4901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8047969516835996554, guid: b95823c3ed7fbcb43937322f71a4fe94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.5
+      value: -12.2
       objectReference: {fileID: 0}
     - target: {fileID: 8047969516835996554, guid: b95823c3ed7fbcb43937322f71a4fe94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5270,7 +5274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 414022644767504612, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 414022644767504612, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5326,7 +5330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2818800356473750315, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
       propertyPath: instructionsToHide.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2818800356473750315, guid: b6c229c562b433143b30f0e34e8dc32b, type: 3}
       propertyPath: instructionsToShow.Array.size

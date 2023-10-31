@@ -26,6 +26,10 @@ public class Goal : MonoBehaviour
 
     public void UnlockDoor()
     {
+        if (gameObject.transform.childCount > 0)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
         gameObject.SetActive(false);
     }
 }
