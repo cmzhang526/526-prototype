@@ -22,8 +22,13 @@ public class Spike : MonoBehaviour
 
         PlayerController pc = other.GetComponent<PlayerController>();
         if (pc != null)
-        {
+        {           
             pc.SpawnAtLastCheckpoint();
         }
+    }
+
+    public IEnumerator ResetState()
+    {
+        yield return new WaitForSeconds(2f);
     }
 }
