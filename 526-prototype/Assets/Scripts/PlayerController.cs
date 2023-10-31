@@ -26,4 +26,20 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.transform.position = respawnPoint;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z)) 
+        {
+            Camera cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+            if (cam.orthographicSize == 25)
+            {
+                cam.orthographicSize = 60;
+            }
+            else
+            {
+                cam.orthographicSize = 25;
+            }
+        }
+    }
 }
