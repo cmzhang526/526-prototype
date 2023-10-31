@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class AnalyticsTestforCoin : MonoBehaviour
 {
-    [SerializeField] private string CoinsURL; //https://docs.google.com/forms/u/1/d/e/1FAIpQLSebOn2bOdAEFXFa18xCbGScnZf4FAML6fYEpaUlhhBBf2tqRQ/formResponse
-    [SerializeField] private string SpikeURL; //https://docs.google.com/forms/u/0/d/e/1FAIpQLSciKoomFaXT1B-S4GDQBDwPTuo-vDvQlZubFPJHq7DFcEaZVQ/formResponse
+    [SerializeField] private string CoinsURL; //https://docs.google.com/forms/u/0/d/e/1FAIpQLSd33S19khipbCtDUnQYSfvidNHg8HBRK-BNOgA8WlDKU77QYg/formResponse
+    [SerializeField] private string SpikeURL; //https://docs.google.com/forms/u/0/d/e/1FAIpQLSemguIxLw_fNak-MTN21GpAiJRyMkFSEYpxVbIvXPR9kwtn6Q/formResponse
 
     private long _sessionID;
     private int _testInt;
@@ -59,8 +59,8 @@ public class AnalyticsTestforCoin : MonoBehaviour
     {
         // Create the form and enter reponses;
         WWWForm form = new WWWForm();
-        form.AddField("entry.439495272", sessionID);
-        form.AddField("entry.306375043", testInt);
+        form.AddField("entry.961188245", sessionID);
+        form.AddField("entry.1775649406", testInt);
 
         // Send responses and verify result
         using (UnityWebRequest www = UnityWebRequest.Post(CoinsURL, form))
@@ -85,8 +85,8 @@ public class AnalyticsTestforCoin : MonoBehaviour
     {
         // Create the form and enter reponses;
         WWWForm form = new WWWForm();
-        form.AddField("entry.493098765", playerX);
-        form.AddField("entry.189242426", playerY);
+        form.AddField("entry.773412834", playerX);
+        form.AddField("entry.955899894", playerY);
 
         // Send responses and verify result
         using (UnityWebRequest www = UnityWebRequest.Post(SpikeURL, form))

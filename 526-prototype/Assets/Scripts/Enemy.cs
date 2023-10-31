@@ -11,5 +11,13 @@ public class Enemy : MonoBehaviour
             var pc = other.gameObject.GetComponent<PlayerController>();
             pc.SpawnAtLastCheckpoint();
         }
+
+        AnalyticsTestforCoin atest = other.gameObject.GetComponent<AnalyticsTestforCoin>();
+        if (atest != null)
+        {
+            float posX = other.transform.position.x;
+            float posY = other.transform.position.y;
+            atest.SendSpike(posX, posY);
+        }
     }
 }

@@ -522,6 +522,14 @@ PrefabInstance:
       propertyPath: totalCoin
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 6410834814931845909, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
+      propertyPath: CoinsURL
+      value: https://docs.google.com/forms/u/0/d/e/1FAIpQLSd33S19khipbCtDUnQYSfvidNHg8HBRK-BNOgA8WlDKU77QYg/formResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410834814931845909, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
+      propertyPath: SpikeURL
+      value: https://docs.google.com/forms/u/0/d/e/1FAIpQLSemguIxLw_fNak-MTN21GpAiJRyMkFSEYpxVbIvXPR9kwtn6Q/formResponse
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
 --- !u!1 &1763446939 stripped
