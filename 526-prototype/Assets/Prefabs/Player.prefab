@@ -277,7 +277,7 @@ MonoBehaviour:
   respawnPoint: {x: 0, y: 0}
   currentShape: 2
   currentCoin: 0
-  totalCoin: 10
+  totalCoin: 12
 --- !u!114 &6410834814931845909
 MonoBehaviour:
   m_ObjectHideFlags: 0
