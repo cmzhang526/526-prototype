@@ -143,12 +143,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1137271316579625894, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.86742
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137271316579625894, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.86742
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137271316579625894, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.86742
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137271316579625894, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1137271316579625894, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 2779225333504700632, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_fontSize
@@ -278,6 +290,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2915646331662370728, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915646331662370728, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2915646331662370730, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -351,7 +371,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
@@ -359,8 +387,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.42932037
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.42932037
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.42932037
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -113
       objectReference: {fileID: 0}
     - target: {fileID: 7572262088663135390, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -521,6 +561,10 @@ PrefabInstance:
     - target: {fileID: 1823474112688655331, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: totalCoin
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410834814931845909, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
+      propertyPath: TimeURL
+      value: https://docs.google.com/forms/u/0/d/e/1FAIpQLSfDcgjOVmgtRhwrWizsM1YIhD_3l4LyiAXK_azBGMAWy7tuAg/formResponse
       objectReference: {fileID: 0}
     - target: {fileID: 6410834814931845909, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: CoinsURL

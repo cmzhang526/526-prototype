@@ -9,6 +9,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 {
     [SerializeField] private string CoinsURL; //https://docs.google.com/forms/u/0/d/e/1FAIpQLSd33S19khipbCtDUnQYSfvidNHg8HBRK-BNOgA8WlDKU77QYg/formResponse
     [SerializeField] private string SpikeURL; //https://docs.google.com/forms/u/0/d/e/1FAIpQLSemguIxLw_fNak-MTN21GpAiJRyMkFSEYpxVbIvXPR9kwtn6Q/formResponse
+    [SerializeField] private string TimeURL; //https://docs.google.com/forms/u/0/d/e/1FAIpQLSfDcgjOVmgtRhwrWizsM1YIhD_3l4LyiAXK_azBGMAWy7tuAg/formResponse
 
     private long _sessionID;
     private int _testInt;
@@ -16,6 +17,11 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     private float _playerX;
     private float _playerY;
+
+    private string _currLevel;
+
+    private float _pastTime;
+    private float _currTime;
 
     private PlayerController playerControllerforCoin = null;
 
@@ -25,10 +31,11 @@ public class AnalyticsTestforCoin : MonoBehaviour
         double epochTime = System.Math.Round((System.DateTime.Now - new System.DateTime(1970, 1, 1)).TotalMilliseconds);
         playerControllerforCoin = GetComponent<PlayerController>();
         currCoins = playerControllerforCoin.currentCoin;
-        _sessionID = (long)epochTime;
+        _sessionID = (long)epochTime/10000;
 
         //test
         Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
+        _currTime = Time.time;
     }
 
     private void Update()
@@ -39,7 +46,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
             _testInt = currCoins;
             SendCoin();
         }
-        
+       
     }
 
     public void SendCoin()
@@ -53,6 +60,20 @@ public class AnalyticsTestforCoin : MonoBehaviour
     {
         Debug.Log("Sent Spike Form");
         StartCoroutine(PostSpike(posX.ToString(), posY.ToString()));
+    }
+
+    public void SendChckpointTime(float _Time)
+    {
+        Debug.Log("Sent Checkpoint Time Form");
+        float tempTime = UpdateTimeData(_Time);
+        StartCoroutine(PostCheckpointTime(_sessionID.ToString(), _testInt.ToString(), tempTime.ToString()));
+    }
+
+    private float UpdateTimeData(float _Time)
+    {
+        _pastTime = _Time - _currTime;
+        _currTime = Time.time;
+        return _pastTime;
     }
 
     private IEnumerator PostCoin(string sessionID, string testInt)
@@ -101,6 +122,33 @@ public class AnalyticsTestforCoin : MonoBehaviour
             else
             {
                 Debug.Log("Spike Form upload complete!");
+
+            }
+
+        }
+    }
+
+    private IEnumerator PostCheckpointTime(string sessionID, string checkpointID, string _Time)
+    {
+        // Create the form and enter reponses;
+        WWWForm form = new WWWForm();
+        form.AddField("entry.359554342", sessionID);
+        form.AddField("entry.132313672", checkpointID);
+        form.AddField("entry.589853041", _Time);
+
+        // Send responses and verify result
+        using (UnityWebRequest www = UnityWebRequest.Post(TimeURL, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+
+            }
+            else
+            {
+                Debug.Log("Checkpoint Form upload complete!");
 
             }
 
