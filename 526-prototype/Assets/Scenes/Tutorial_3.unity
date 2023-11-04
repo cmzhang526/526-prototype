@@ -6757,6 +6757,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246530688}
     m_Modifications:
+    - target: {fileID: 1574696727285094418, guid: 6b5ccbd949ec5c545ba0f4d544c5d4a4, type: 3}
+      propertyPath: m_Size.y
+      value: 3.5634475
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574696727285094418, guid: 6b5ccbd949ec5c545ba0f4d544c5d4a4, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.018758059
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574696727285094418, guid: 6b5ccbd949ec5c545ba0f4d544c5d4a4, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.06258935
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452258789839405428, guid: 6b5ccbd949ec5c545ba0f4d544c5d4a4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.27746585
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452258789839405428, guid: 6b5ccbd949ec5c545ba0f4d544c5d4a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0147
+      objectReference: {fileID: 0}
     - target: {fileID: 8685149268579882330, guid: 6b5ccbd949ec5c545ba0f4d544c5d4a4, type: 3}
       propertyPath: m_Name
       value: CircleGoal
@@ -6998,6 +7018,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246530688}
     m_Modifications:
+    - target: {fileID: 5734489397005645981, guid: 7165a226e9bddb1498cada2a01319105, type: 3}
+      propertyPath: m_Size.y
+      value: 3.267847
+      objectReference: {fileID: 0}
+    - target: {fileID: 5734489397005645981, guid: 7165a226e9bddb1498cada2a01319105, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.50177336
+      objectReference: {fileID: 0}
     - target: {fileID: 8685149268579882330, guid: 7165a226e9bddb1498cada2a01319105, type: 3}
       propertyPath: m_Name
       value: TriangleGoal
