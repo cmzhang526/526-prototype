@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject PauseUI;
+    [SerializeField] private GameObject player;
 
     public static bool IsGamePaused = false;
     // Start is called before the first frame update
@@ -50,12 +51,11 @@ public class PauseMenu : MonoBehaviour
     public void ResetLevel()
     {
         // TODO: think about if we need this
-        Debug.Log("=====reset btn test=====");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //PauseUI.SetActive(false);
-        //Time.timeScale = 1f;
-        //IsGamePaused = false;
-        BackToMain();
+        Debug.Log("=====respawn btn test=====");
+        player.GetComponent<PlayerController>().Respawn();
+        PauseUI.SetActive(false);
+        Time.timeScale = 1f;
+        IsGamePaused = false;
     }
 
     public void BackToMain()

@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour
         respawnPoint = gameObject.transform.position;
     }
 
+    public void Respawn()
+    {
+        gameObject.transform.position = respawnPoint;
+    }
+
     public IEnumerator SpawnAtLastCheckpoint()
     {
         Time.timeScale = 0;
