@@ -100,7 +100,6 @@ GameObject:
   - component: {fileID: 4765080187676705928}
   - component: {fileID: 1823474112688655331}
   - component: {fileID: 6410834814931845909}
-  - component: {fileID: 7024246848497100153}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -293,38 +292,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinsURL: https://docs.google.com/forms/u/1/d/e/1FAIpQLSebOn2bOdAEFXFa18xCbGScnZf4FAML6fYEpaUlhhBBf2tqRQ/formResponse
   SpikeURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSciKoomFaXT1B-S4GDQBDwPTuo-vDvQlZubFPJHq7DFcEaZVQ/formResponse
-  TimeURL: 
-  CameraZoomURL: 
-  EnableCoinsTest: 0
-  EnableSpikeTest: 0
-  EnabelTimeTest: 0
-  EnableCameraZoomTest: 0
---- !u!61 &7024246848497100153
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308860686575220424}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0df3cbf9b3c55dc44a8291f37e0a6e5f, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.01, y: 0.7528007}
-  m_EdgeRadius: 0
 --- !u!1 &1308860686726664901
 GameObject:
   m_ObjectHideFlags: 0
