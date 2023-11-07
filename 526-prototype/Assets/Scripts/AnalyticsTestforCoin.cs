@@ -125,7 +125,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     private IEnumerator PostSpike(string playerX, string playerY)
     {
-        // Create the form and enter reponses;
+        // Create the form and enter reponses of players position;
         WWWForm form = new WWWForm();
         form.AddField("entry.773412834", playerX);
         form.AddField("entry.955899894", playerY);
@@ -151,7 +151,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     private IEnumerator PostCheckpointTime(string sessionID, string checkpointID, string _Time)
     {
-        // Create the form and enter reponses;
+        // Create the form and enter reponses of time duration;
         WWWForm form = new WWWForm();
         form.AddField("entry.359554342", sessionID);
         form.AddField("entry.132313672", checkpointID);
@@ -178,7 +178,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     private IEnumerator PostCamera(string playerX, string playerY)
     {
-        // Create the form and enter reponses;
+        // Create the form and enter reponses of player positions;
         WWWForm form = new WWWForm();
         form.AddField("entry.1537586619", playerX);
         form.AddField("entry.1193859103", playerY);

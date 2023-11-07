@@ -380,11 +380,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2915646331662370728, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 1920
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 2915646331662370728, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 1080
+      value: 768
       objectReference: {fileID: 0}
     - target: {fileID: 2915646331662370728, guid: 58d23613d612309499bd41b6784f06a9, type: 3}
       propertyPath: m_ReferencePixelsPerUnit
