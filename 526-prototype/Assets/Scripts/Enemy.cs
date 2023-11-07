@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             var pc = other.gameObject.GetComponent<PlayerController>();
-            pc.SpawnAtLastCheckpoint();
+            StartCoroutine(pc.SpawnAtLastCheckpoint());
         }
 
         AnalyticsTestforCoin atest = other.gameObject.GetComponent<AnalyticsTestforCoin>();

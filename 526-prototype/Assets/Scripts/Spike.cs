@@ -22,8 +22,8 @@ public class Spike : MonoBehaviour
 
         PlayerController pc = other.GetComponent<PlayerController>();
         if (pc != null)
-        {           
-            pc.SpawnAtLastCheckpoint();
+        {
+            StartCoroutine(pc.SpawnAtLastCheckpoint());
         }
     }
 

@@ -7,6 +7,14 @@ public class InstructionHandler : MonoBehaviour
     public List<GameObject> instructionsToShow;
     public List<GameObject> instructionsToHide;
 
+    private void Start()
+    {
+        foreach (var instruction in instructionsToShow)
+        {
+            instruction.gameObject.SetActive(false);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

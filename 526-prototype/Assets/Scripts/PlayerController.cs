@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -9,10 +10,13 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public Vector2 respawnPoint;
+    public GameObject respawnTextObj;
+    public TextMeshProUGUI respawnMsg;
 
     public Shape.ShapeType currentShape = Shape.ShapeType.Square;
     public int currentCoin = 0;
     public int totalCoin = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +26,19 @@ public class PlayerController : MonoBehaviour
         respawnPoint = gameObject.transform.position;
     }
 
-    public void SpawnAtLastCheckpoint()
+    public IEnumerator SpawnAtLastCheckpoint()
     {
+        Time.timeScale = 0;
+        int time = 4;
+        respawnTextObj.SetActive(true);
+        while (time > 0)
+        {
+            time--;
+            respawnMsg.text = "Respawning in " + time + "...";
+            yield return new WaitForSecondsRealtime(1);
+        }
+        respawnTextObj.SetActive(false);
+        Time.timeScale = 1;
         gameObject.transform.position = respawnPoint;
     }
 
