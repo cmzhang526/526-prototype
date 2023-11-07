@@ -178,7 +178,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     private IEnumerator PostCamera(string playerX, string playerY)
     {
-        // Create the form and enter reponses;
+        // Create the form and enter reponses of player positions;
         WWWForm form = new WWWForm();
         form.AddField("entry.1537586619", playerX);
         form.AddField("entry.1193859103", playerY);
