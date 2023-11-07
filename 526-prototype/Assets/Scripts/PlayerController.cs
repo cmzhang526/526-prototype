@@ -50,6 +50,13 @@ public class PlayerController : MonoBehaviour
             if (cam.orthographicSize == 25)
             {
                 cam.orthographicSize = 60;
+                AnalyticsTestforCoin atest = GetComponent<AnalyticsTestforCoin>();
+                if (atest != null)
+                {
+                    float posX = transform.position.x;
+                    float posY = transform.position.y;
+                    atest.SendCamera(posX, posY);
+                }
             }
             else
             {
