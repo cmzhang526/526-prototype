@@ -40,15 +40,32 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Breakable"))
         {
             Destroy(other.gameObject);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else if (other.gameObject.CompareTag("Coin") || other.gameObject.CompareTag("Goal") || other.gameObject.CompareTag("Instruction"))
+        {
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Breakable"))
         {
             Destroy(other.gameObject);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else if (other.gameObject.CompareTag("Coin") || other.gameObject.CompareTag("Goal") || other.gameObject.CompareTag("Instruction"))
+        {
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

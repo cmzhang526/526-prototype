@@ -10,6 +10,8 @@ TagManager:
   - Torch
   - Coin
   - Breakable
+  - Goal
+  - Instruction
   layers:
   - Default
   - TransparentFX

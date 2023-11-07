@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Coin : MonoBehaviour
 {
+    bool hasCollected = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Player"))
+        if (!other.CompareTag("Player") || hasCollected)
         {
             return;
         }
 
+        hasCollected = true;
         PlayerController pc = other.gameObject.GetComponent<PlayerController>();
         pc.currentCoin++;
 
