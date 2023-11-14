@@ -64,6 +64,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     public void SendSpike(float posX, float posY)
     {
+        // Assign variables for spike position attribute
         if (EnableSpikeTest)
         {
             Debug.Log("Sent Spike Form");
