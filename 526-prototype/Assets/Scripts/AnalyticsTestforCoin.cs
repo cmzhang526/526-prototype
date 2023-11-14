@@ -33,7 +33,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     private void Awake()
     {
-        // Assign sessionID to identify playtests
+        // Assign sessionID to identify playtests, use epoch timestamp as ID
         double epochTime = System.Math.Round((System.DateTime.Now - new System.DateTime(1970, 1, 1)).TotalMilliseconds);
         playerControllerforCoin = GetComponent<PlayerController>();
         currCoins = playerControllerforCoin.currentCoin;
