@@ -23,9 +23,9 @@ public class Shape : MonoBehaviour
         if (cacheShapeSprites == null)
         {
             cacheShapeSprites = new Dictionary<ShapeType, Sprite>();
-            var circle = Resources.Load<Sprite>("ShapeSprites/Circle");
-            var square = Resources.Load<Sprite>("ShapeSprites/Square");
-            var triangle = Resources.Load<Sprite>("ShapeSprites/Triangle");
+            var circle = Resources.Load<Sprite>("ShapeSprites/Circle_1");
+            var square = Resources.Load<Sprite>("ShapeSprites/Square_1");
+            var triangle = Resources.Load<Sprite>("ShapeSprites/Tri_1");
             cacheShapeSprites.Add(ShapeType.Circle, circle);
             cacheShapeSprites.Add(ShapeType.Square, square);
             cacheShapeSprites.Add(ShapeType.Triangle, triangle);
