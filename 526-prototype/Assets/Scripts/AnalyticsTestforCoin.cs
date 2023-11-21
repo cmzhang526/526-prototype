@@ -57,7 +57,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     public void SendCoin()
     {
-        // Assign variables
+        // Assign variables for coins collected
 
         if (EnableCoinsTest) StartCoroutine(PostCoin(_sessionID.ToString(), _testInt.ToString()));
     }
