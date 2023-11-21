@@ -828,11 +828,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -875.67
+      value: -875.1
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.81
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 1308860687962538819, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: m_LocalPosition.z
@@ -896,19 +896,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6410834814931845909, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: EnabelTimeTest
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6410834814931845909, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: EnableCoinsTest
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6410834814931845909, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: EnableSpikeTest
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6410834814931845909, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
       propertyPath: EnableCameraZoomTest
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b71e7acb781faf24cba83bb3d7500764, type: 3}
