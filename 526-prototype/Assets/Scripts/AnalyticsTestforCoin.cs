@@ -74,6 +74,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     public void SendChckpointTime(float _Time)
     {
+        // Assign variables for system time
         float tempTime = UpdateTimeData(_Time);
         if (EnabelTimeTest)
         {
