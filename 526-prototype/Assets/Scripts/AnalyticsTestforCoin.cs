@@ -85,6 +85,7 @@ public class AnalyticsTestforCoin : MonoBehaviour
 
     public void SendCamera(float posX, float posY)
     {
+        // Assign variables for position attribute
         if (EnableCameraZoomTest)
         {
             Debug.Log("Sent Camera Form");
