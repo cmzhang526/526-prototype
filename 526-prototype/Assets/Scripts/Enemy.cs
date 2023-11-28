@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    float bounceTime = 0f;
+
+    void Update()
+    {
+        bounceTime += Time.deltaTime;
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if (Input.GetKey(KeyCode.E))
+            {
+                if(bounceTime > .25f)
+                {
+                    bounceTime = 0f;
+                    this.gameObject.GetComponent<WaypointFollower>().FlipWaypoints();
+                }
+
+                return;
+            }
             var pc = other.gameObject.GetComponent<PlayerController>();
             StartCoroutine(pc.SpawnAtLastCheckpoint());
         }
