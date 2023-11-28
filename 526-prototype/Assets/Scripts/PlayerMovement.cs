@@ -10,16 +10,21 @@ public class PlayerMovement : MonoBehaviour
     public bool jump = false;
     public bool canJump = true;
     bool crouch = false;
+    [SerializeField] public PlayerController myPC;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E) && myPC.currentShape == Shape.ShapeType.Square)
         {
+            spriteRenderer.color = Color.blue;
             return;
         }
+
+        spriteRenderer.color = Color.white;
         //Debug.Log(Input.GetAxisRaw("Horizontal"));
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 

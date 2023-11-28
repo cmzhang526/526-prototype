@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -15,7 +16,9 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKey(KeyCode.E))
+            var pc = other.gameObject.GetComponent<PlayerController>();
+
+            if (Input.GetKey(KeyCode.E) && pc.currentShape == Shape.ShapeType.Square)
             {
                 if(bounceTime > .25f)
                 {
@@ -25,7 +28,7 @@ public class Enemy : MonoBehaviour
 
                 return;
             }
-            var pc = other.gameObject.GetComponent<PlayerController>();
+            
             StartCoroutine(pc.SpawnAtLastCheckpoint());
         }
 
