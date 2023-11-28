@@ -31,5 +31,6 @@ public class Goal : MonoBehaviour
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
         gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

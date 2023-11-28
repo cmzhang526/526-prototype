@@ -40,7 +40,6 @@ public class Shape : MonoBehaviour
 
     private void ChangePlayerShape(PlayerController pc)
     {
-
         pc.spriteRenderer.sprite = cacheShapeSprites[myShapeType];
         pc.currentShape = myShapeType;
         Destroy(gameObject);
